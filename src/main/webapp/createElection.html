@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title></title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body id="createEleBody">
+
+    <div id="electionTypes">
+        <p class="electionType" onclick="politicalElection(this)" id="politic">POLITICAL ELECTION</p>
+        <p class="electionType" onclick="organizationalElection(this)" id="organ">ORGANIZATIONAL ELECTION</p> 
+    </div>
+    <button id="logoutButtonInCreateElectionPage" class="logout" onclick="logout()">LOGOUT</button>
+
+    <div class="electionDiv">
+
+        <div class="electionInputs" id="politicalElectionInputs">
+
+            <div id="electionChoices">
+              <div class="electionChoice" onclick="changeToTalukElection()" id="stateElection">STATE ELECTION</div>
+              <div class="electionChoice white" onclick="changeToStateElection()" id="talukElection">TALUK ELECTION</div>
+            </div>
+    
+            <div class="electionInputsDiv">
+                <label class="elecLabel">Election Name</label>
+                <input type="text" placeholder="Name of the election" class="electionInput electionInp eee" id="politicalElecName">
+            </div>
+            <div class="electionInputsDiv">
+                <label class="elecLabel">Description</label>
+                <textarea placeholder="Description" class="electionInput electionInp eee" id="politicalDesc"></textarea>
+            </div>
+            <div class="electionInputsDiv">
+                <label class="elecLabel">Election Date</label>
+                <input type="date" placeholder="electiondate" class="electionInput electionInp eee" id="politicalElecDate">
+            </div>
+            <div id="electionTimeDiv">
+                <label class="elecLabel">Election Time</label>
+                <input type="time" placeholder="Start Time" class="electionTiming electionInp eee" id="politicalElecStartTime">
+                <label class="to">To</label>
+                <input type="time" placeholder="End Time" class="electionTiming electionInp eee" id="politicalElecEndTime">
+            </div>
+            <div class="electionInputsDiv">
+                <label class="elecLabel">Result Date</label>
+                <input type="date" placeholder="resultdate" class="electionInput electionInp eee" id="politicalElecResultDate">
+            </div>
+            <div class="electionInputsDiv">
+                <label class="elecLabel">Result Time</label>
+                <input type="time" placeholder="result time" class="electionInput electionInp eee" id="politicalElecResultTime">
+            </div>
+            <div class="electionInputsDiv">
+                <label class="elecLabel">State</label>
+                <select name="state" id="state" class="electionInput electionInp">
+                    <option value="SelectState">Select State</option>
+                    <option value="Andra Pradesh">Andra Pradesh</option>
+                    <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                    <option value="Assam">Assam</option>
+                    <option value="Bihar">Bihar</option>
+                    <option value="Chhattisgarh">Chhattisgarh</option>
+                    <option value="Goa">Goa</option>
+                    <option value="Gujarat">Gujarat</option>
+                    <option value="Haryana">Haryana</option>
+                    <option value="Himachal Pradesh">Himachal Pradesh</option>
+                    <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                    <option value="Jharkhand">Jharkhand</option>
+                    <option value="Karnataka">Karnataka</option>
+                    <option value="Kerala">Kerala</option>
+                    <option value="Madya Pradesh">Madya Pradesh</option>
+                    <option value="Maharashtra">Maharashtra</option>
+                    <option value="Manipur">Manipur</option>
+                    <option value="Meghalaya">Meghalaya</option>
+                    <option value="Mizoram">Mizoram</option>
+                    <option value="Nagaland">Nagaland</option>
+                    <option value="Orissa">Orissa</option>
+                    <option value="Punjab">Punjab</option>
+                    <option value="Rajasthan">Rajasthan</option>
+                    <option value="Sikkim">Sikkim</option>
+                    <option value="Tamil Nadu">Tamil Nadu</option>
+                    <option value="Telangana">Telangana</option>
+                    <option value="Tripura">Tripura</option>
+                    <option value="Uttaranchal">Uttaranchal</option>
+                    <option value="Uttar Pradesh">Uttar Pradesh</option>
+                    <option value="West Bengal">West Bengal</option>
+                    <option disabled style="background-color:#aaa; color:#fff">UNION Territories</option>
+                    <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                    <option value="Chandigarh">Chandigarh</option>
+                    <option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
+                    <option value="Daman and Diu">Daman and Diu</option>
+                    <option value="Delhi">Delhi</option>
+                    <option value="Lakshadeep">Lakshadeep</option>
+                    <option value="Pondicherry">Pondicherry</option>
+                </select>
+            </div>
+            <div class="electionInputsDiv" id="talukDiv">
+                <label class="elecLabel">Taluk</label>
+                <select name="taluk" id="taluk" class="electionInput electionInp eee">
+                    <option value="">-- select one -- </option>
+                </select>
+            </div>
+            <div class="electionInputsDiv">
+                <label class="elecLabel">Voters</label>
+                <input type="file" accept=".xls,.xlsx" placeholder="Voters list" class="electionInput electionInp eee" id="votersListForPolitical" onchange="storeFileForPolitical()">
+            </div>
+            <p id="polWarn">You must fill in all of the fields!</p>
+            <button class="electionCreate" onclick="createPoliticalElection()">CREATE ELECTION</button>
+        </div>
+
+
+
+        <div class="electionInputs" id="organizationElectionInputs">
+
+            <div class="electionInputsDiv">
+                <label class="elecLabel">School / College Name</label>
+                <input type="text" class="electionInput electionInp" id="organization">
+            </div>
+            <div class="electionInputsDiv">
+                <label class="elecLabel">Organizer Name</label>
+                <input type="text" class="electionInput electionInp" id="organizer">
+            </div>
+            <div class="electionInputsDiv">
+                <label class="elecLabel">Organizer contact no</label>
+                <input type="text" class="electionInput electionInp" id="organizerPh">
+            </div>
+            <div class="electionInputsDiv">
+                <label class="elecLabel">Election Name</label>
+                <input type="text" placeholder="Election name" class="electionInput electionInp" id="electionName">
+            </div>
+            <div class="electionInputsDiv">
+                <label class="elecLabel">Election Description</label>
+                <textarea type="text" placeholder="Election Description" class="electionInput electionInp" id="electionDesc"> </textarea>
+            </div>
+            <div class="electionInputsDiv">
+                <label class="elecLabel">Election Date</label>
+                <input type="date" placeholder="Election Date" class="electionInput electionInp" id="electiondate">
+            </div>
+            <div class="electionInputsDiv">
+                <label class="elecLabel">Election time</label>
+                <input type="time" placeholder="start time" class="electionTiming electionInp" id="startTime">
+                <label class="to">To</label>
+                <input type="time" placeholder="end time" class="electionTiming electionInp" id="endTime">
+            </div>
+            <div class="electionInputsDiv">
+                <label class="elecLabel">Result Date</label>
+                <input type="date" placeholder="Result Date" class="electionInput electionInp" id="resultDate">
+            </div>
+            <div class="electionInputsDiv">
+                <label class="elecLabel">Result Time</label>
+                <input type="time" placeholder="Result time" class="electionInput electionInp" id="resultTime"> 
+            </div>
+            <div class="electionInputsDiv">
+                <label class="elecLabel">Voters List</label>
+                <input type="file" accept=".xls,.xlsx" class="electionInput electionInp" id="votersListForOrganizational" onchange="storeFileForOrganizational()">
+            </div>
+            <p id="orgWarn">You must fill in all of the fields!</p>
+            <button class="electionCreate" onclick="createOrganizationalElection()">CREATE ELECTION</button>
+        </div> 
+    </div>
+
+    
+
+    <script src="validation.js"></script>
+    <script src="election.js"></script>
+
+</body> 
+
+</html>

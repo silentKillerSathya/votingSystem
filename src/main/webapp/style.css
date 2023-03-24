@@ -1,0 +1,1350 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin:0%;
+    overflow-x: hidden;
+    font-family: 'Oswald', sans-serif;
+    user-select: none;
+  }
+
+  #home{
+    height:100%;
+    width:100%;
+    position: fixed;
+  }
+
+  #logoutButton{
+    position: absolute;
+    height: 5%;
+    width: 8%;
+    left: 85%;
+    top: 2%;
+    background-color: #EF8392;
+    z-index: 5;
+    border: none;
+    border-radius: 5px; 
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .topLeft{
+    height:27%;
+    width:24%;
+    border-bottom-right-radius: 60%;
+    background-color: #EF8392; 
+  }
+
+  .bottomLeft{
+    height:40%;
+    width:30%;
+    margin-top: 19%;
+    border-top-right-radius: 70%;
+    background-color: #4CB5AE;
+  }
+
+  .topRight{
+    height:75%;
+    width:60%;
+    position: absolute;
+    top:0%;
+    left: 40%;
+    background-color: #697E7A;
+  }
+
+  .frontDiv{
+    position: absolute;
+    height: 80%;
+    width: 80%;
+    background-color: white;
+    top: 10%;
+    left: 10%;
+    border-radius: 10px;
+    box-shadow: 5px 5px 20px 10px grey;
+  }
+
+  .inTopLeft{
+    height:22%;
+    width:17.5%;
+    border-bottom-right-radius: 80%;
+    background-color: #EF8392;
+  }
+
+  .inTopRight{
+    height:81%;
+    width:62.5%;
+    margin-left: 37.5%;
+    margin-top: -12.2%;
+    border-bottom-left-radius: 80%;
+    background-color: #697E7A; 
+  }
+
+  #invalidLogin{
+    font-size: 22px;
+    color: red;
+    display: none;
+  }
+
+  #invalidSignup{
+    font-size: 22px;
+    color: red;
+    display: none;
+  }
+
+  .inBottomLeft{
+    height:36%;
+    width:25%;
+    background-color:#4CB5AE;
+    margin-top: -9.5%;
+    border-top-right-radius: 95%;
+  }
+
+  .poll{
+    position: absolute;
+    top: 10%;
+    left: 12%;
+    height: 70%;
+  }
+
+  #userActions{
+    height: 10%;
+    width:50%;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .userAction{
+    border-bottom: 3px solid white;
+  }
+
+  .appDesc{
+    position: absolute;
+    height: 45%;
+    width: 30%;
+    top: 25%;
+    left: 4%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #continueButton{
+    height:15%;
+    width: 40%;
+    border-radius: 5px;
+    font-size: 22px;
+    font-weight: bold;
+    background-color: #4CB5AE;
+    border: none;
+    margin-top: 4%;
+    margin-left: -13%;
+  }
+
+  #appName{
+    font-size: 40px;
+    font-weight: bold;
+    margin-left: 12%;
+  }
+
+  #appDescrp{
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 8%;
+    margin-top: 1%;
+    line-height: 30px;
+  }
+  
+ 
+  /*-------------------login/signup---------------------------------------------------------*/
+  
+  #loginBody{
+    height:100%;
+    width:100%;
+    background-color: #697E7A;
+  }
+
+  #top{
+    height:40%;
+    width: 100%;
+    background-color: #EF8392;
+  }
+
+  #loginInputsDiv{
+    position: absolute;
+    height:70%;
+    width:30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    top:15%;
+    left: 35%;
+    box-shadow: 5px 10px 20px 10px grey;
+    background-color: white;
+  }
+
+  #choices{
+    height:7%;
+    width:55%;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: row;
+    margin-top:5%;
+    margin-left: 25%;
+    background-color: #44B4B8;
+    border: 1px solid black;
+  }
+
+  .choice{
+     height:100%;
+     width:50%;
+     border-radius: 50px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     font-weight: bold;
+     background-color: white;
+  }
+
+  #choiceForSignup{
+    background-color: #44B4B8;
+  }
+
+  #loginInputs{
+    height:60%;
+    width:100%;
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #signupInputs{
+    height:70%;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+    display:none;
+  }
+
+  .heading{
+    font-weight:bold;
+    font-size: 30px;
+  }
+  
+  .inputBox{
+    height:13%;
+    width:80%;
+    margin-top:2%;
+    text-align:center;
+    font-size:20px;
+    border-radius: 10px;
+  }
+  
+  #loginSubmitButton{
+    height:15%;
+    width:81%;
+    margin-top:5%;
+    font-size:25px;
+    font-weight:bold;
+    background-color:#44B4B8;
+    border:none;
+    border-radius: 10px;
+  }
+  
+  #signupSubmitButton{
+    height:13%;
+    width:81%;
+    margin-top:4%;
+    font-size:25px;
+    font-weight:bold;
+    background-color:#44B4B8;
+    border:none;
+    border-radius: 10px;
+  }
+
+  /*-------------admin page---------------------------------*/
+
+  #admin{
+    height: 32%;
+    width: 60%;
+    margin-top: 2%;
+    margin-left: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  #adminActions{
+    height: 45%;
+    width: 85%;
+    margin-top: 1%;
+    margin-left: 8%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  #welcomeAdmin{
+    height:8%;
+    width:85%;
+    margin-top: -10%;
+    margin-left: 8%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #adminImgDiv{
+    height:100%;
+    width:30%;
+  }
+
+  #adminDetailsDiv{
+    height:100%;
+    width:50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    font-weight: bold;
+  }
+
+  .adminAction{
+    height: 40%;
+    width: 31%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 25px;
+    font-weight: bold;
+    background-color:lightpink;
+    border-radius: 10px;
+    box-shadow: 3px 10px 10px 5px lightgray;
+  }
+
+  #logoutButtonInAdminPage{
+    height: 6%;
+    width: 9%;
+    background-color: #EF8392;
+    border: none;
+    border-radius: 5px; 
+    font-size: 18px;
+    font-weight: bold;
+    left: 85%;
+    top: 3%;
+    position: absolute;
+  }
+
+  
+
+/*------------------create election.html----------------------------------------*/
+
+  #createEleBody{
+    background-color: #44B4B8;
+  }
+
+  .elecLabel{
+    width: 30%;
+    font-size: 23px;
+  }
+
+  .electionDiv{
+    height: 87%;
+    width: 91%;
+    position: absolute;
+    top:7%;
+    left:4%;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+  }
+
+  #electionTypes{
+    height:6%;
+    width:35%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    left: 30%;
+    position: absolute;
+  }
+
+  .electionType{
+    font-size: 21px;
+    font-weight: bold;
+  }
+
+  #organizationElectionInputs{
+      display: none;
+  }
+
+  .electionInputs{
+    height:100%;
+    width:80%;
+    margin:auto;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;   
+  }
+
+  #electionChoices{
+    height:7%;
+    width:30%;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 2%;
+    margin-top: 2%;
+    border: 2px solid #697E7A;
+    border-radius: 50px;
+    margin-left: 65%;
+    font-size: 19px;
+    font-weight: bold;
+    background-color: #44B4B8;
+  }
+
+  #talukElection{
+    background-color: white;
+  }
+
+  .to{
+    width: 5%;
+    margin-left: 4%;
+  }
+
+  .electionChoice{
+     height:100%;
+     width:50%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     border-radius: 50px;
+  }
+
+  .electionInput{
+    height:70%;
+    width:50%;
+    font-size: 20px;  
+    margin-right: 5%;
+  }
+
+  .electionTiming{
+    height:70%;
+    width:20%;
+    font-size: 20px;
+  }
+
+  .electionInputsDiv{
+    height:10%;
+    width:90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  #electionTimeDiv{
+    height:10%;
+    width:90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .electionCreate{
+    height:8%;
+    width:20%;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 2%;
+    background-color: #44B4B8;
+    border: none;
+    border-radius: 5px;
+  }
+
+  label{
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 7%;
+  }
+
+  #logoutButtonInCreateElectionPage{
+    height: 5%;
+    width: 8%;
+    background-color: #EF8392;
+    border: none;
+    border-radius: 5px; 
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 85%;
+    margin-top: 0.5%;
+  }
+
+  /*----------------------show elections----------------------------------------------------------------*/
+
+  #wholeElections{
+    height:90%;
+    width:90%;
+    margin: auto;
+    margin-top: 3%;
+    background-color: white;
+    overflow: scroll; 
+  }
+
+  #titleOfTheElection{
+    height:8%;
+    width:60%;
+    margin: auto;
+    margin-top: 3%;
+    background-color: #44B4B8;
+  }
+
+  .allElection{
+    height:20%;
+    width:80%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3%;
+    font-size: 25px;
+    box-shadow: 3px 3px 20px 5px grey;
+    border-radius: 10px;
+  }
+
+  .electionImgDiv{
+    height: 70%;
+    width: 10%;
+    border-radius: 50%;
+  }
+
+  .electionImg{
+    height: 100%;
+    width: 80%;
+    border-radius: 50%;
+  }
+
+  .nameOfElection{
+    height: 100%;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .statusDiv{
+    height:30%;
+    width:40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .active{
+    height:90%;
+    width:25%;
+  }
+
+  .inactive{
+    height:100%;
+    width:90%;
+  }
+
+  .electionHeadings{
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .electionSubHeadings{
+    font-size: 20px;
+  }
+
+  #electionDetails{
+    height: 90%;
+    width: 90%;
+    margin: auto;
+    margin-top: 3%;
+    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+  }
+
+  .electionTitleDiv{
+    height:9%;
+    width: 90%;
+    background-color: #44B4B8;
+    margin: auto;
+    margin-top: 3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+  .electionContentDiv{
+    height:80%;
+    width:90%;
+    margin: auto;
+    margin-top: 1%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .allDetails{
+     height: 90%;
+     width:45%;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-evenly;
+     border-radius: 10px;
+     box-shadow: 5px 5px 10px 0 rgb(0 0 0 / 50%), -1px -1px 10px 0 rgb(0 0 0 / 50%);
+  }
+
+  .detail{
+    margin-left: 10%;
+  }
+
+  .electionDetailsButtonsDiv{
+    height:90%;
+    width:50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .electionDetailsButtons{
+    height:17%;
+    width:85%;
+    border: none;
+    font-size: 23px;
+    font-weight: bold;
+    background-color : #44B4B8;
+    border-radius: 5px;
+  }
+
+  .electionsViewButton{
+    height : 8%;
+    width : 18%;
+    background-color : #44B4B8;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 2%;
+    margin-left: 11%;
+    border-radius: 10px;
+    border: none;
+  }
+
+  /*-----------------------add candidate-------------------*/
+
+  #candidatesDetails{
+    height:90%;
+    width:90%;
+    margin: auto;
+    margin-top: 3%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: white;
+  }
+
+  #nameForElection{
+    height: 7%;
+    width: 90%;
+    margin-top: 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  #addCandidateDiv{
+    height: 80%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    box-shadow: 3px 3px 20px 5px grey;
+    margin-top: -1%;
+  }
+
+  #addnew{
+    margin-top: -2%;
+  }
+
+  #candiImg{
+    height: 90%;
+    width: 100%;
+  }
+
+  #addCandidateImgDiv{
+    height: 80%;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:aliceblue;
+    margin-top: -1%;
+  }
+
+  .candidatesInputDiv{
+    height: 7%;
+    width:90%;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+  }
+
+  .candidateInput{
+    height:95%;
+    width:60%;
+    font-size: 18px;
+  }
+
+  #addCandidate{
+    height:7%;
+    width:25%;
+    background-color: #44B4B8;
+    border: none;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: -2%;
+  }
+
+  .candidateLabel{
+    width: 27%;
+  }
+
+  /*--------------show candidates--------------------*/
+
+  #appTitle{
+    height : 9%;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 2%;
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  #candDetails{
+    height: 88%;
+    width: 92%;
+    margin: auto;
+    margin-top:3%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #candidates{
+    height: 85%;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    overflow-x: scroll;
+    font-size: 20px;
+  }
+
+  .candidate{
+    height: 90%;
+    width: 28%;
+    display: flex;
+    margin-left: 3%;
+    flex-direction: column;
+    border-radius: 30px;
+    box-shadow: 5px 5px 10px 0 rgb(0 0 0 / 50%), -1px -1px 10px 0 rgb(0 0 0 / 50%);
+  }
+
+  
+  .removeMark{
+    font-size: 42px;
+    color: grey; 
+  }
+
+  .crs{
+    font-size: 35px;
+    position: absolute;
+    top: 3%;
+    color: grey;
+    left: 90%;
+  }
+
+  .emptyResult{
+    height: 70%;
+    width: 50%;
+    margin-top: 8%;
+    margin-left: 26%;
+  }
+
+  .cross{
+    height: 9%;
+    width: 14%;
+    border-radius: 30px;
+    margin-left: 90%;
+    margin-top: -5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    box-shadow: 3px 3px 10px 5px grey;
+    display: none;
+  }
+
+  .ccc:hover .cross{
+    display: flex;
+  }
+
+  .ccc:hover .candidateImgDiv{
+    margin-top: 0%;
+  }
+
+  .candidateImgDiv{
+    height: 40%;
+    width: 80%;
+    border-radius: 9%;
+    margin: auto;
+    margin-top: 9%;
+  }
+
+  .candidateImg{
+    height: 100%;
+    width: 100%;
+    border-radius: 8%;
+  }
+
+  .symbolDiv{
+    height:80%;
+    width:30%;
+  }
+
+  .symbolImg{
+    height:100%;
+    width:100%;
+  }
+
+  .candiLabels{
+    width:38%;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .canDet{
+   height:15%;
+   width:100%;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+  }
+
+  #candiSymbleDiv{
+    height:25%;
+  }
+
+  .dDiv{
+    height:50%;
+    width:83%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /*--------------------vote-----------------------*/
+
+  .coverDiv{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color:rgba(0,0,0,0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top:0%;
+  }
+
+  #getVoterIdDiv{
+    height : 30%;
+    width: 30%;
+    position: absolute;
+    background-color:lightcyan;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+  }
+
+  #electionChoiceDiv{
+    height: 80%;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  #radioButton{
+    font-size: 25px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .eChoices{
+    margin-left: 20%;
+    height: 30%;
+    width:40%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .radioLabels{
+    font-size: 23px;
+  }
+
+  #nextButton{
+    height: 40%;
+    width: 20%;
+    border: none;
+    background-color: #44B4B8;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 70%;
+  }
+
+  #voterIdDiv{
+    height: 75%;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  #getId{
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .idInputBox{
+    height:25%;
+    width: 80%;
+    border-radius: 10px;
+    font-size: 25px;
+    margin-top: -5%;
+    text-align: center;
+  }  
+
+  #enterButton{
+    height: 28%;
+    width: 55%;
+    border: none;
+    border-radius: 5px;
+    background-color: #44B4B8;
+    font-size: 22px;
+    font-weight: bold;
+  }
+
+
+  /*---------------------votersAuthorizedElections--------------------------*/
+
+  #votersAuthorizedElections{
+    height:90%;
+    width:90%;
+    margin: auto;
+    margin-top: 3%;
+    background-color: white;
+    overflow: scroll;
+  }
+
+  .confirmationDiv{
+    height: 25%;
+    width: 34%;
+    position: absolute;
+    background-color:aliceblue;
+    top: 39%;
+    left: 32%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 28px;
+    font-weight: bold;
+    border-radius: 10px;
+  }
+
+  .confirmButtonsDiv{
+    height:20%;
+    width:60%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .confirmButtons{
+    height:100%;
+    width:25%;
+    border:none;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #44B4B8;
+  }
+
+  #yes{
+    background-color: #44B4B8;
+  }
+
+  #no{
+    background-color: lightgray;
+  }
+  .confirm{
+    background-color: #44B4B8;
+  }
+
+  .cancel{
+    background-color: lightgray;
+  }
+
+  .successDiv{
+    height:19%;
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bold;
+    background-color:aliceblue;
+    border-radius: 10px;
+  }
+
+  .successImg{
+    height: 45%;
+    margin-top: -5%;
+  }
+
+  #frontDiv2{
+    position: absolute;
+    height: 88%;
+    width: 90%;
+    background-color: white;
+    top: 6.5%;
+    left: 5%;
+    border-radius: 10px;
+    box-shadow: 5px 5px 20px 10px grey;
+    overflow-y: scroll;
+  }
+
+  #eNameDiv{
+    height: 8%;
+    width: 80%;
+    margin: auto;
+    margin-top: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 5px;
+  }
+
+  .candidateViewOptions{
+    height:30%;
+    width:80%;
+    border: 1px solid black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+  }
+
+  .candiDesc{
+    height: 100%;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 23px;
+  }
+
+  .candPhto{
+    height:100%;
+    width:100%;
+  }
+
+  .symb{
+    height:70%;
+    width:70%;
+  }
+
+  .canPht{
+    height:60%;
+    width:60%;
+  }
+
+  .voteButton{
+    height:25%;
+    width:60%;
+    border: none;
+    background-color: #44B4B8;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .headings{
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .otpDiv{
+    height: 30%;
+    width: 30%;
+    border:1px solid black;
+    background-color:aliceblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+  }
+
+  .otpDiv2{
+    height: 80%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  #otpInput{
+    height:20%;
+    width:70%;
+    border-radius: 5px;
+    font-size: 20px;
+  }
+
+  #okButton{
+    height:15%;
+    width:20%;
+    background-color: #44B4B8;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  #elNameDiv{
+    height: 8%;
+    width: 80%;
+    margin: auto;
+    margin-top: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 5px;
+  }
+
+  #frontDiv3{
+    position: absolute;
+    height: 88%;
+    width: 90%;
+    background-color: white;
+    top: 6.5%;
+    left: 5%;
+    border-radius: 10px;
+    box-shadow: 5px 5px 20px 10px grey;
+  }
+
+  #tableDiv{
+    height:80%;
+    width:80%;
+    margin: auto;
+    margin-top: 2%;
+    overflow-y: scroll;
+  }
+
+  #resultTable{
+    height:10%;
+    width:100%;
+    border: 1px solid black;
+  }
+
+  .tableTitle{
+    border:1px solid black;
+    font-size: 22px;
+    font-weight: bold;
+  }
+
+  .one{
+    width:20%;
+  }
+
+  .two{
+    width:25%;
+  }
+
+  .three{
+    width:20%;
+  }
+
+  .four{
+    width:25%;
+  }
+
+  td{
+    text-align: center;  
+  }
+
+  .candPht{
+    width:60%;
+    margin-left: 20%;
+  }
+
+  .symbl{
+    width:70%;
+    margin-left: 15%;
+  }
+
+  .msgDiv{
+    height:20%;
+    width:30%;
+    border-radius: 10px;
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 23px;
+  }
+
+  .ok{
+    height:23%;
+    width:17%;
+    background-color: #44B4B8;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+  }
+
+  .msg{
+    width:80%;
+    font-size: 24px;
+  }
+
+  #polWarn{
+    color: red;
+    font-size: 22px;
+    margin-top:1%;
+    display:none;
+  }
+
+  #orgWarn{
+    color: red;
+    font-size: 22px;
+    margin-top:1%;
+    display: none;
+  }
+
+  #candidateWarn{
+    color: red;
+    font-size: 22px;
+    margin-top:1%;
+    display:none;
+  }
+
+  #logoutElectionPage{
+    height: 5%;
+    width: 7%;
+    background-color: #EF8392;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    top: 0.2%;
+    left: 89%
+  }
+
+  .confirmationButtonsDiv{
+    height:20%;
+    width:60%;
+    border: 1px solid black;
+  }
+
+  input[type='radio']{
+    
+    accent-color: #44B4B8;
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+}
+
+#logoutResult{
+  height: 5%;
+  width: 7%;
+  background-color: #EF8392;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: bold;
+  position: absolute;
+  top: 0.5%;
+  left: 89%
+}
+
+#tableDiv::-webkit-scrollbar{
+  display: none;
+}

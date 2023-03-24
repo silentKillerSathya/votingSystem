@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title></title>
+  <link href="style.css" rel="stylesheet" type="text/css"/>
+  <script src="https://kit.fontawesome.com/6c29065cc0.js" crossorigin="anonymous"></script>
+</head>
+
+<body onload="showAllElections()" style="background-color: #44B4B8; position: fixed;">
+
+  <button id="logoutElectionPage" class="logout" onclick="logout()">LOGOUT</button>
+
+    <div id="wholeElections"> 
+    </div>
+
+    <div id="candidatesDetails">
+
+      <div id="nameForElection"></div>
+      <div id="addCandidateImgDiv">
+        <img src="candidateImg.png" id="candiImg">
+      </div>
+
+      <div id="addCandidateDiv">
+
+        <img src="candidate.png">
+       
+          <h2 id="addnew">ADD NEW CANDIDATE</h2>
+
+          <div class="candidatesInputDiv">
+              <label class="candidateLabel">Name</label>
+              <input type="text" placeholder="Candidate name" class="candidateInput" id="candidateName">
+          </div>
+          
+          <div class="candidatesInputDiv">
+              <label class="candidateLabel">Date Of Birth</label>
+              <input type="date" class="candidateInput" id="candidateDob">
+          </div>
+          
+          <div class="candidatesInputDiv">
+              <label class="candidateLabel">ID</label>
+              <input type="text" class="candidateInput" id="candidateId">
+          </div>
+
+          <div class="candidatesInputDiv">
+              <label class="candidateLabel">Info</label>
+              <textarea class="candidateInput" id="candidateInfo"></textarea>
+          </div>
+
+          <div class="candidatesInputDiv">
+              <label class="candidateLabel">Photo</label>
+              <input type="file" class="candidateInput" id="candidateImg" accept="image/*" onchange="storeImage(this.files[0], 'StoreImageForCandidate')">
+          </div>
+
+          <div class="candidatesInputDiv">
+              <label class="candidateLabel">Party Name</label>
+              <input type="text" placeholder="Party Name" class="candidateInput" id="party">
+          </div>
+
+          <div class="candidatesInputDiv">
+              <label class="candidateLabel">Symbol</label>
+              <input type="file" class="candidateInput" id="symbolImg" accept="image/*" onchange="storeImage(this.files[0], 'StoreImageForSymbol')">
+          </div>
+      
+          <p id="candidateWarn">You must fill in all of the fields!</p>
+          <button id="addCandidate">ADD CANDIDATE</button>  
+  </div>
+
+    </div>
+        
+    <div id="candDetails">
+      <div id="appTitle">    
+      </div>
+      <div id="candidates">
+        <!-- <i class="fa-solid fa-circle-chevron-left" id="previous"></i>
+        <i class="fa-solid fa-circle-chevron-right" id="next"></i>             -->
+      </div>
+    </div>
+
+    <script src="validation.js"></script>
+    <script src="viewElection.js"></script>
+</body> 
+
+</html>
